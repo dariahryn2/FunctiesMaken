@@ -29,12 +29,13 @@ function calculate($num1, $num2, $operation) {
     return $result;
 }
 
-
+while (true){
 $num1 = getNumber("Enter first number: ");
 $operation = getOperation();
 $num2 = getNumber("Enter second number: ");
 
 $result = calculate($num1, $num2, $operation);
-echo "Result: $result\n";
+echo "Result: $result\n"; 
+}
 
 ?>
