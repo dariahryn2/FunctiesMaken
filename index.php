@@ -26,6 +26,7 @@ function calculate($num1, $num2, $operation) {
     } else {
         $result = "Invalid operation!";
     }
+    return $result;
 }
 
 
