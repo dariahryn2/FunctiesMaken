@@ -11,21 +11,20 @@ function getOperation() {
 }
 
 function calculate($num1, $num2, $operation) {
-    switch ($operation) {
-        case '+':
-            return $num1 + $num2;
-        case '-':
-            return $num1 - $num2;
-        case '*':
-            return $num1 * $num2;
-        case '/':
-            if ($num2 == 0) {
-                return "Error: Division by zero!";
-            } else {
-                return $num1 / $num2;
-            }
-        default:
-            return "Invalid operation!";
+    if ($operation == "+") {
+        $result = $num1 + $num2;
+    } elseif ($operation == "-") {
+        $result = $num1 - $num2;
+    } elseif ($operation == "*") {
+        $result = $num1 * $num2;
+    } elseif ($operation == "/") {
+        if ($num2 != 0) {
+            $result = $num1 / $num2;
+        } else {
+            $result = "Error: Division by zero!";
+        }
+    } else {
+        $result = "Invalid operation!";
     }
 }
 
